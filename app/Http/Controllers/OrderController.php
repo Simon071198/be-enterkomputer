@@ -63,34 +63,4 @@ class OrderController extends Controller
         return response()->json($billData);
     }
 
-    // public function getBill($id)
-    // {
-    //     $order = Order::with(['orderItems' => function ($query) {
-    //         $query->select('id', 'order_id', 'product_id', 'quantity', 'price')
-    //             ->with(['product' => function ($query) {
-    //                 $query->select('id', 'name', 'variant', 'category_id');
-    //             }]);
-    //     }, 'table' => function ($query) {
-    //         $query->select('id', 'name');
-    //     }])->find($id);
-
-    //     $billData = [
-    //         'table_name' => $order->table->name,
-    //         'items' => $order->orderItems->map(function ($item) {
-    //             return [
-    //                 'id' => $item->id,
-    //                 'product_name' => $item->product->name,
-    //                 'variant' => $item->product->variant,
-    //                 'category_id' => $item->product->category_id,
-    //                 'quantity' => $item->quantity,
-    //                 'price' => $item->price,
-    //                 'order_id' => $item->order_id,
-    //                 'product_id' => $item->product_id
-    //             ];
-    //         })
-    //     ];
-
-    //     return response()->json($billData);
-    // }
-
 }
